@@ -44,6 +44,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         postgres: 'postgres', # this is just for dev machines
       }
     },
+    oh_my_zsh: { users: [{
+        login: 'vagrant',
+        theme: 'robbyrussell',
+        plugins: ['gem', 'git', 'rails3', 'redis-cli', 'ruby'],
+      }]
+    }
   }
 
   # Configure the virtual machine to use 2GB of RAM
@@ -69,8 +75,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe 'passenger_apache2::default'
     chef.add_recipe 'passenger_apache2::mod_rails'
     chef.add_recipe "sonerdy::default"
+    chef.add_recipe "zsh"
+    chef.add_recipe "oh_my_zsh"
   end
 
   config.vm.provision :shell, inline: 'yes | apt-get install qt5-default libqt5webkit5-dev'
   config.vm.provision :shell, inline: 'yes | apt-get install xvfb'
+  config.vm.provision :shell, inline: 'yes | apt-get install zsh'
 end
