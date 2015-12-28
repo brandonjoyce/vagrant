@@ -43,6 +43,15 @@ SITE
     yum (3.8.2)
     yum-epel (0.6.5)
       yum (~> 3.2)
+    zsh (1.0.3)
+
+GIT
+  remote: https://github.com/shingara/oh-my-zsh-chef
+  ref: master
+  sha: f223d7618e3413f727dff52b5a2454d9d3086ce2
+  specs:
+    oh_my_zsh (0.0.1)
+      git (>= 0.0.0)
 
 DEPENDENCIES
   apache2 (>= 0)
@@ -50,9 +59,11 @@ DEPENDENCIES
   build-essential (>= 0)
   git (>= 0)
   nodejs (>= 0)
+  oh_my_zsh (>= 0)
   passenger_apache2 (>= 0)
   postgresql (>= 0)
   ruby_build (>= 0)
   ruby_rbenv (>= 0)
   vim (>= 0)
+  zsh (>= 0)
 
