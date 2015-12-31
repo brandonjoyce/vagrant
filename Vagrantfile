@@ -79,7 +79,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "oh_my_zsh"
   end
 
-  config.vm.provision :shell, inline: 'yes | apt-get install qt5-default libqt5webkit5-dev'
-  config.vm.provision :shell, inline: 'yes | apt-get install xvfb'
-  config.vm.provision :shell, inline: 'yes | apt-get install zsh'
+  config.vm.provision :shell, path: 'sudo_setup.sh'
 end
