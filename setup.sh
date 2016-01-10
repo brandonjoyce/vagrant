@@ -18,3 +18,4 @@ sudo apachectl restart
 # GIT Config
 git config --global user.email "brandon@sonerdy.com"
 git config --global user.name "Brandon Joyce"
+git config --global push.default simple
