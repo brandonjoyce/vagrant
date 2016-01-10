@@ -7,3 +7,10 @@ apt-get install software-properties-common && \
 add-apt-repository ppa:nviennot/tmate      && \
 apt-get update                             && \
 apt-get install tmate
+
+yes | apt-get install tmux
+
+# Install stow for dotfile management
+yes | apt-get install stow
+
+yes | apt-get install tree
