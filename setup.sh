@@ -19,3 +19,6 @@ sudo apachectl restart
 git config --global user.email "brandon@sonerdy.com"
 git config --global user.name "Brandon Joyce"
 git config --global push.default simple
+
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
