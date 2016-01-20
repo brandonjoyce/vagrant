@@ -14,3 +14,5 @@ yes | apt-get install tmux
 yes | apt-get install stow
 
 yes | apt-get install tree
+
+npm install bower -g
