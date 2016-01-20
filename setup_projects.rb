@@ -5,9 +5,9 @@ bitbucket_projects = ENV['BITBUCKET_PROJECTS'].split(':')
 code_folder = "/vagrant/code"
 
 github_projects.each do |project|
-  setup_project.call('git@github.com', project)
+  Functions.setup_project('git@github.com', project, code_folder)
 end
 
 bitbucket_projects.each do |project|
-  setup_project.call('git@bitbucket.com', project)
+  Functions.setup_project('git@bitbucket.com', project, code_folder)
 end

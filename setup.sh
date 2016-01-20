@@ -5,10 +5,12 @@ gem install bundler
 rbenv rehash
 
 # dotfiles w/ stow
-git clone git@github.com:brandonjoyce/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-sh setup.sh
-source ~/.zshrc
+if [ ! -d ~/dotfiles ]; then
+  git clone git@github.com:brandonjoyce/dotfiles.git ~/dotfiles
+  cd ~/dotfiles
+  sh setup.sh
+  source ~/.zshrc
+fi
 
 # setup projects
 cd /vagrant
