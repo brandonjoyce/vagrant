@@ -16,3 +16,6 @@ yes | apt-get install stow
 yes | apt-get install tree
 
 npm install bower -g
+
+# Silver Searcher
+yes | apt-get install silversearcher-ag
