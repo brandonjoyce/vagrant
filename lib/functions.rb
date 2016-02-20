@@ -17,7 +17,11 @@ class Functions
     get_project(project_url, project_folder)
 
     Dir.chdir(project_folder) do
-      puts `sh script/setup`
+      if File.exist? "#{project_folder}/script/setup"
+        puts `sh script/setup`
+      else
+        puts "no script/setup file found for #{project}"
+      end
     end
   end
 end
